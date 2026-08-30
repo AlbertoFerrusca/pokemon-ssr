@@ -2,9 +2,11 @@ import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
   {
-    path: 'pokemons/:id',
-    renderMode: RenderMode.Prerender,
-    async getPrerenderParams() {
+    //path: 'pokemons/:id',
+    path: 'pokemons/:name',
+    //renderMode: RenderMode.Prerender,
+    renderMode: RenderMode.Server,
+    /*async getPrerenderParams() {
     return [
     { id: '1' },
     { id: '2' },
@@ -12,7 +14,11 @@ export const serverRoutes: ServerRoute[] = [
     { id: '4' },
     { id: '5' },
     ];
-    }
+    }*/
+  },
+  {
+    path:'pokemons/page/:page',
+    renderMode:RenderMode.Server, 
   },
   {
     path: '**',

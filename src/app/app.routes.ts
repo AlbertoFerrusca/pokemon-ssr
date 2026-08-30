@@ -7,7 +7,7 @@ path: '',
 loadComponent: () => import('./pages/about-pages/about-pages'),
 },
 {
-  path: 'pokemons',
+  path: 'pokemons/page/:page',
   loadComponent:()=>import ('./pages/pokemon-page/pokemon-page'),
 },
 
